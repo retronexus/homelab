@@ -20,7 +20,7 @@
 # Create wireguard config folder
 - name: Create Docker folders
   ansible.builtin.file:
-    path: docker/wireguard-server/config
+    path: /src/docker/wireguard-server/config
     state: directory
     owner: retronexus
     group: retronexus
@@ -30,7 +30,7 @@
 # Create gluetun config folder
 - name: Create gluetun folders
   ansible.builtin.file:
-    path: docker/gluetun/config
+    path: /src/docker/gluetun/config
     state: directory
     owner: retronexus
     group: retronexus
@@ -40,18 +40,19 @@
 # Create radarr config folder
 - name: Create radarr folders
   ansible.builtin.file:
-    path: docker/radarr/config
+    path: /src/docker/radarr/config
     state: directory
     owner: retronexus
     group: retronexus
     mode: 0775
     recurse: yes
 
-- name: Create media folder
+# Create sonarr config folder
+- name: Create sonarr folders
   ansible.builtin.file:
-    path: mediaserver/data
+    path: /src/docker/sonarr/config
     state: directory
     owner: retronexus
     group: retronexus
     mode: 0775
-    recurse: yes
+    recurse: yes    

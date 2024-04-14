@@ -1,0 +1,29 @@
+- name: Create media folder
+  ansible.builtin.file:
+    path: /home/retronexus/mediaserver/data/media/{{item}}
+    state: directory
+    owner: retronexus
+    group: retronexus
+    mode: 0775
+    recurse: yes
+  with_items: ["music", "movies", "tv"]
+
+- name: Create torrents folder
+  ansible.builtin.file:
+    path: /home/retronexus/mediaserver/data/torrents/{{item}}
+    state: directory
+    owner: retronexus
+    group: retronexus
+    mode: 0775
+    recurse: yes
+  with_items: ["music", "movies", "tv"]
+
+- name: Create usenet folder
+  ansible.builtin.file:
+    path: /home/retronexus/mediaserver/data/usenet/{{item}}
+    state: directory
+    owner: retronexus
+    group: retronexus
+    mode: 0775
+    recurse: yes
+  with_items: ["music", "movies", "tv"]

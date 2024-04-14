@@ -9,7 +9,8 @@
 - include_tasks: user.yml
 
 # Setup Folders
-- include_tasks: folders.yml
+- include_tasks: folders_docker.yml
+- include_tasks: folders_mediaserver.yml
 
 # Setup Docker
 - include_tasks: docker.yml
