@@ -1,0 +1,57 @@
+# Create docker folder
+- name: Create Docker folders
+  ansible.builtin.file:
+    path: docker
+    state: directory
+    owner: retronexus
+    group: retronexus
+    mode: 0775
+    recurse: yes
+
+- name: Create Docker folder for compose files
+  ansible.builtin.file:
+    path: /src/docker
+    state: directory
+    owner: retronexus
+    group: retronexus
+    mode: 0775
+    recurse: yes
+
+# Create wireguard config folder
+- name: Create Docker folders
+  ansible.builtin.file:
+    path: docker/wireguard-server/config
+    state: directory
+    owner: retronexus
+    group: retronexus
+    mode: 0775
+    recurse: yes
+
+# Create gluetun config folder
+- name: Create gluetun folders
+  ansible.builtin.file:
+    path: docker/gluetun/config
+    state: directory
+    owner: retronexus
+    group: retronexus
+    mode: 0775
+    recurse: yes
+
+# Create radarr config folder
+- name: Create radarr folders
+  ansible.builtin.file:
+    path: docker/radarr/config
+    state: directory
+    owner: retronexus
+    group: retronexus
+    mode: 0775
+    recurse: yes
+
+- name: Create media folder
+  ansible.builtin.file:
+    path: mediaserver/data
+    state: directory
+    owner: retronexus
+    group: retronexus
+    mode: 0775
+    recurse: yes

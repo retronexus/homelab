@@ -1,0 +1,2 @@
+[home]
+homeserver ansible_host=192.168.178.41 ansible_user=retronexus ansible_connection=ssh ansible_ssh_private_key_file=~/.ssh/homeserver
