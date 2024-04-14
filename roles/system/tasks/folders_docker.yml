@@ -56,3 +56,23 @@
     group: retronexus
     mode: 0775
     recurse: yes    
+
+# Create prowlarr config folder
+- name: Create prowlarr folders
+  ansible.builtin.file:
+    path: /src/docker/prowlarr/config
+    state: directory
+    owner: retronexus
+    group: retronexus
+    mode: 0775
+    recurse: yes        
+
+# Create qbittorrent config folder
+- name: Create qbittorrent folders
+  ansible.builtin.file:
+    path: /src/docker/qbittorrent/config
+    state: directory
+    owner: retronexus
+    group: retronexus
+    mode: 0775
+    recurse: yes        
