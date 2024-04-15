@@ -8,15 +8,6 @@
     mode: 0775
     recurse: yes
 
-- name: Create Docker folder for compose files
-  ansible.builtin.file:
-    path: /src/docker
-    state: directory
-    owner: retronexus
-    group: retronexus
-    mode: 0775
-    recurse: yes
-
 # Create wireguard config folder
 - name: Create Docker folders
   ansible.builtin.file:
