@@ -1,5 +1,5 @@
-- name: Clone a repo with separate git directory
-  ansible.builtin.git:
+- name: CLONE GIT REPO FOR DOCKER TO SERVER
+  git:
     repo: https://github.com/retronexus/docker.git
     dest: /src/docker
     force: yes

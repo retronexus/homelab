@@ -1,4 +1,4 @@
-- name: Ensure all necessary groups are created
+- name: ENSURE ALL GROUPS ARE CREATED
   group:
     name: "{{ item }}"
   loop:
@@ -6,7 +6,7 @@
     - samba
     - "{{ username }}"
 
-- name: Ensure the non-root user is created
+- name: ENSURE NON-ROOT USER IS CREATED
   user:
     name: "{{ username }}"
     password: "{{ password | password_hash('sha512') }}"
@@ -18,14 +18,14 @@
     shell: "{{ shell }}"
     update_password: on_create
 
-- name: Enable passwordless sudo for "{{ username }}"
+- name: ENABLE PASSWORDLESS SUDO FOR "{{ username }}"
   lineinfile:
     dest: /etc/sudoers
     regexp: "^%wheel"
     line: "{{ username }} ALL=(ALL) NOPASSWD: ALL"
     validate: "/usr/sbin/visudo -cf %s"
 
-- name: Suppress login message (hushlogin)
+- name: SUPPRESS LOGIN MESSAGE (HUSHLOGIN)
   file:
     path: /home/{{ username }}/.hushlogin"
     mode: 0644

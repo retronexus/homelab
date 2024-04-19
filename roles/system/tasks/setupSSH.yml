@@ -1,11 +1,11 @@
-- name: Disable SSH password auth
+- name: DISABLE SSH AUTH
   lineinfile:
     dest: /etc/ssh/sshd_config
     regexp: "^#PasswordAuthentication yes"
     line: "PasswordAuthentication no"
-  notify: Restart SSH daemon
+  notify: RESTART SSH DAEMON
 
-- name: Update SSH configuration to be more secure.
+- name: UPDATE SSH CONFIG
   lineinfile:
     dest: "/etc/ssh/sshd_config"
     regexp: "{{ item.regexp }}"
@@ -30,4 +30,4 @@
       line: "GSSAPIAuthentication {{ security_ssh_gss_api_authentication }}"
     - regexp: "^X11Forwarding"
       line: "X11Forwarding {{ security_ssh_x11_forwarding }}"
-  notify: Restart SSH daemon
+  notify: RESTART SSH DAEMON

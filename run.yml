@@ -1,6 +1,9 @@
 ---
-- hosts: all
-  become: yes
-
+- name: Configuring Homelab Server
+  hosts: homelab
+  become: true # Use "become" to obtain root privileges
   roles:
-    - role: system
+    - system
+    - docker
+    - git
+    - mediaserver

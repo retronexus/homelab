@@ -5,7 +5,7 @@ username: retronexus
 shell: /bin/bash
 
 # Packages to be installed
-packages:
+base_packages:
   - apt-transport-https
   - ca-certificates
   - curl
@@ -18,7 +18,7 @@ packages:
   - tmux  
   - unattended-upgrades
   - vim
-  - resolveconf
+  - resolvconf
   - wireguard
 
 # SSH configuration

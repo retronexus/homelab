@@ -1,0 +1,7 @@
+# folders for media server
+mediaserver_folders:
+  - music
+  - movies
+  - tv
+  - books
+  - unfinished

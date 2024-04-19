@@ -1,20 +1,9 @@
 ---
 # Essential Installs
-- include_tasks: essential.yml
+- include_tasks: installEssentials.yml
 
 # Configure SSH
-- include_tasks: ssh.yml
+- include_tasks: setupSSH.yml
 
 # Configure User
-- include_tasks: user.yml
-
-# Setup Folders
-- include_tasks: folders_docker.yml
-- include_tasks: folders_mediaserver.yml
-
-# Setup Docker
-- include_tasks: docker.yml
-- include_tasks: portainer.yml
-
-# Setup GIT
-- include_tasks: git.yml
+- include_tasks: setupUser.yml
