@@ -3,6 +3,7 @@ docker_config_dirs:
   - calibre
   - calibre-web
   - gluetun
+  - homeassistant
   - hydra2
   - jellyfin
   - jellyseerr
