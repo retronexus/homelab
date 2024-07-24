@@ -1,5 +1,0 @@
-- name: CLONE GIT REPO FOR DOCKER TO SERVER
-  git:
-    repo: https://github.com/retronexus/docker.git
-    dest: /src/docker
-    force: yes

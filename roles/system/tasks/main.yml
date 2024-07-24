@@ -1,9 +1,0 @@
----
-# Essential Installs
-- include_tasks: installEssentials.yml
-
-# Configure SSH
-- include_tasks: setupSSH.yml
-
-# Configure User
-- include_tasks: setupUser.yml

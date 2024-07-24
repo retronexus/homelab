@@ -1,4 +1,0 @@
-- name: INSTALL BASE PACKAGES
-  package:
-    name: "{{ base_packages }}"
-    state: latest

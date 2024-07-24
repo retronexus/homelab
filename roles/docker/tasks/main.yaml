@@ -1,4 +1,0 @@
----
-- include_tasks: installDocker.yaml
-- include_tasks: createFolders.yaml
-- include_tasks: installPortainer.yaml
